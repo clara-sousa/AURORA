@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros</title>
+    <link rel="stylesheet" href="CSS/emprestimo.css">
+    <script src="JS/emprestimo.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></script>
+    <script async src="https://cse.google.com/cse.js?cx=e45c4e89ffc8d405f"></script>
+</head>
+<body>
+    <header>
+        <div class="menu-head">
+            <img src="IMG/logo.png" alt="Logo da Aurora">                       
+            <ul>
+                <li><a href="páginainicial.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="catálogo.html">Catálogo</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="ajuda.html">Perguntas Frequentes</a></li>
+                <li><a href="conta.html">Sua Conta</a></li>
+            </ul>        
+        </div>
+    </header>
+    <section id="carrd">
+    <div id="emp">
+        <h2>Realizar Empréstimo</h2>
+        <p>O tempo máximo de empréstimo é de 1 mês (30 dias), após isso é necessário renovar o  empréstimo ou devolver o livro, para que não seja impedido de realizar outros empréstimos</p>
+    </div>
+    <div id="cep">
+        <h3>Não sabe seu CEP?</h3>   
+<div class="gcse-search"></div>
+        <h3>Quer saber mais sobre esse livro?</h3>
+         <div class="gcse-search"></div>
+    </div>
+</section>
+    <section class="book">
+        <h1 id="book-title">Título do Livro</h1> 
+        <img id="book-cover" alt="Capa do livro"/>
+        <h1 id="book-author">Nome do Autor</h1>
+    </section>
+    <section class="form">
+    <form id="protocol" action="#" method="POST">
+        <div class="prototitle">
+            <h2>Nome completo</h2>
+        </div>
+        <input type="text" name="fullName" required>
+
+        <div class="prototitle">
+            <h2>E-mail</h2>
+        </div>
+        <input type="email" name="email" required>
+
+        <div class="prototitle">
+            <h2>Endereço</h2>
+        </div>
+        <input type="text" name="address" required>
+
+        <div class="prototitle">
+            <h2>CEP</h2>
+        </div>
+        <input type="number" name="cep" required>
+
+        <div class="prototitle">
+            <h2>Telefone</h2>
+        </div>
+        <input type="tel" name="phone">
+
+        <section id="dataemp">
+            <h2>Escolha uma das datas de devolução disponíveis</h2>
+            <select id="empdata" name="returnDate">
+                <option value="0" disabled selected>Selecione uma data</option>
+                <option value="1">30 de Novembro de 2024</option>
+                <option value="2">30 de Dezembro de 2024</option>
+                <option value="3">30 de Janeiro de 2025</option>
+                <option value="4">25 de Fevereiro de 2025</option>
+            </select>
+            <button type="submit" id="btn">FINALIZAR</button>
+        </section>
+    </form>
+</section>
+<footer>
+    <img src="IMG/logo.png" alt="Logo da Aurora">
+    <p>Siga a Aurora nas redes sociais</p>
+    <div class="social-icons">
+   <i class="fab fa-instagram">                                   @Biblioteca_Aurora</i>
+      <i class="fab fa-x">   @Aurora_ofc</i>
+    </div>
+    <div id="copy">
+      <p>&copy; <span id="year"></span> Biblioteca Aurora. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

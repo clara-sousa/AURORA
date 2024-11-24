@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="CSS/conta.css">
+    <script src="JS/conta.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&family=Snippet&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Snippet&display=swap" rel="stylesheet">
+    <script async src="https://cse.google.com/cse.js?cx=e45c4e89ffc8d405f"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="menu-head">
+            <img src="IMG/logo.png" alt="Logo da Aurora">                       
+            <ul>
+                <li><a href="páginainicial.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="catálogo.html">Catálogo</a></li>
+                <li><a href="catálogo.html">Eventos</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li>
+                <li><a href="anexo1.html">Sua Conta</a></li>
+            </ul>        
+        </div>
+    </header>
+    
+    <section class="CONTA">
+        <h1>SUA CONTA</h1>
+        <i class="fa-solid fa-user"></i>
+        <div id="user-stuff">
+            <h3>Status:<span id="status"></span></h3>
+            <h3>Empréstimos em aberto:<span id="emprestimo"></span></h3>
+        </div>
+        <h3>Você está conectado, acesse aqui todas as principais informações da sua conta</h3>
+        
+    </section>
+    <div id="cep">
+        <h3>Adicione seu CEP</h3>   
+        <p>para poder ter acesso aos eventos literários ocorrendo perto de você!</p>
+            <div class="gcse-search"></div>
+    </div>
+    <section class="grafico">
+        <h2>Gráfico de Empréstimos por Mês</h2>
+        <canvas id="myChart" width="850" height="400"></canvas>
+    </section>
+
+    <footer>
+        <img src="IMG/logo.png" alt="Logo da Aurora">
+        <p>Siga a Aurora nas redes sociais</p>
+        <div class="social-icons">
+            <i class="fab fa-instagram"> @Biblioteca_Aurora</i>
+            <i class="fab fa-x"> @Aurora_ofc</i>
+        </div>
+        <div id="copy">
+            <p>&copy; <span id="year"></span> Biblioteca Aurora. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros</title>
+    <link rel="stylesheet" href="CSS/catálogo.css">
+    <script src="JS/worker.js" defer></script>  <!-- Corrigido aqui -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-head">
+            <img src="IMG/logo.png" alt="logo da Aurora">                       
+            <ul>
+                <li><a href="páginainicial.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="catálogo.html">Catálogo</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="ajuda.html">Perguntas Frequentes</a></li>
+                <li><a href="conta.html">Sua Conta</a></li>
+            </ul>        
+        </div>
+    </header>
+
+    <div id="countdown">
+        <h2>Novas adições ao catálogo em:</h2>
+        <span id="days">0 dias</span>
+        <span id="hours">0 horas</span>
+        <span id="minutes">0 minutos</span>
+        <span id="seconds">0 segundos</span>
+    </div>
+
+    <section>
+        <h1>Catálogo de Livros</h1>
+
+        <div class="filter">
+            <label for="category">Filtrar por Categoria:</label>
+            <select id="category" onchange="filterBooks()">
+                <option value="todas">Todas</option>
+                <option value="ficcao">Ficção</option>
+                <option value="ficcao_cient">Ficção Científica</option>
+                <option value="ficcao_his">Ficção Histórica</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="romance">Romance</option>
+                <option value="suspense">Suspense</option>
+                <option value="historico">Histórica</option>
+                <option value="infantil">Infantil</option>
+                <option value="policial">Policial</option>
+                <option value="mistério">Mistério</option>
+                <option value="terror">Terror</option>
+                <option value="sobrenatural">Sobrenatural</option>
+                <option value="paranormal">Paranormal</option>
+                <option value="nao_ficcao">Não Ficção</option>
+                <option value="biografia">Biografia</option>
+                <option value="uni">Universitário</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="criminologia">Criminologia</option>
+                <option value="LGBT">LGBT</option>
+                <option value="jovem_adulto">Young Adult</option>
+                <option value="novo_adulto">New Adult</option>
+                <option value="HQ_Mangá">HQ e Mangás</option>
+                <option value="literatura_ocidental">Literatura Ocidental</option>
+                <option value="literatura_oriental">Literatura Oriental</option>
+                <option value="ficcao_cura">Healing Fiction</option>
+                <option value="Chick_Lit">Chick-lit</option>
+            </select>
+        </div>
+    </section>
+
+    <main>
+        <div id="genre-description"></div>
+        <div id="book-list"></div>
+
+        <div id="pagination">
+            <button id="prev-btn" onclick="prevPage()">Anterior</button>
+            <span id="page-info"></span>
+            <button id="next-btn" onclick="nextPage()">Próximo</button>
+        </div>
+    </main>
+
+    <script src="JS/catálogo.js"></script>
+    <footer>
+        <img src="IMG/logo.png" alt="Logo da Aurora">
+        <p>Siga a Aurora nas redes sociais</p>
+        <div class="social-icons">
+            <i class="fab fa-instagram"> @Biblioteca_Aurora</i>
+            <i class="fab fa-x"> @Aurora_ofc</i>
+        </div>
+        <div id="copy">
+            <p>&copy; <span id="year"></span> Biblioteca Aurora. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

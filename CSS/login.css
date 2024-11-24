@@ -1,0 +1,139 @@
+body {
+  scroll-behavior: smooth;
+  background: black;
+}
+.menu-head {
+    background: none;
+}
+footer {
+  margin-top: 100%;
+  background: none;
+}
+
+form {
+  position: relative; 
+  margin: auto;  
+  margin-top: 15%;
+  background: linear-gradient(to bottom, #000000 10%, #a47928);
+  color: white;
+  padding: 38px;
+  border-radius: 22px;
+  width: 50%; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+form h2, form h1 {
+  text-align: center;
+  font-size: 48px;
+}
+
+form input {
+  background: none;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 15px 0;
+  width: 90%;
+  font-size: 20px;
+}
+
+form button {
+  width: 92%;
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgb(255, 252, 252);
+  color: rgb(9, 9, 9);
+  border: none;
+  cursor: pointer;
+  margin-left: 3%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+form button:hover {
+  background-color: rgb(174, 132, 40);
+  color: rgb(255, 255, 255);
+}
+.newsletter{
+  width: 68%; 
+  margin-left: 20%;
+
+}
+
+#forgot-link, #back-link {
+  text-align: center;
+  cursor: pointer;
+  color: #e6e6e6;
+  font-size: 18px;
+}
+select {
+    background: none;
+    border: white solid 2px; 
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 8px;
+    color: white;
+    border-radius: 20px;
+}
+.newsletter{
+   margin-top: 40%;
+   
+}
+.ring {
+  position: absolute;
+  top: 120%;   
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 150px;
+  height: 400px;
+  padding: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to right, #ffc755, #ffffbf);
+  border-image-slice: 1;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.ring i:nth-child(1) {
+  animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  animation: animate2 10s linear infinite;
+}
+
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

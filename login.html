@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+    <link rel="stylesheet" href="CSS/inicial.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <script src="JS/login.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poller+One&family=Snippet&family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Snippet&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-head">
+            <img src="IMG/logo.png" alt="Logo da Aurora">                       
+            <ul>
+                <li><a href="páginainicial.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="catálogo.html">Catálogo</a></li>
+                <li><a href="catálogo.html">Eventos</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li>
+                <li><a href="anexo1.html">Sua Conta</a></li>
+            </ul>        
+        </div>
+    </header>
+    <div class="ring">
+  <i style="--clr:#bda300;"></i>
+  <i style="--clr:#ff9e55;"></i>
+  <i style="--clr:#ffffff;"></i>
+  </div>
+    <form class="active">
+    <h2>Entre em sua conta</h2>
+    <div>
+        <label for="username">Nome de usuário:</label>
+        <br>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">Sua senha:</label>
+        <br>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <button type="submit">ENTRAR</button>
+    </div>
+    <div>
+        <p id="forgot-link" onclick="toggleForms()">Esqueceu a senha?</p>
+        <p id="register-link" onclick="showRegistrationForm()">Não tem conta? Cadastre-se agora!</p>
+    </div>
+</form>
+
+<form class="forgot" style="display:none;">
+    <h1>Esqueceu sua senha?</h1>
+    <label for="forgot">Digite seu e-mail</label>
+    <input type="email" id="email" name="e-mail" required>
+    <button type="button" id="fgtbttn" onclick="sendRecoveryCode()">Enviar código de recuperação</button>
+    <p id="back-link" onclick="toggleForms()">Voltar para login</p>
+</form>
+
+<form class="code" style="display:none;">
+    <label for="code" id="code-sent" name="sendcode">Digite o código enviado</label>
+    <input type="number" id="code" required>
+    <button type="button" id="confirm-code" onclick="confirmCode()">ENVIAR</button>
+</form>
+
+<form class="new-pssw" style="display:none;">
+    <h1>Defina uma senha nova</h1>
+    <label for="new-pssw">Digite uma senha nova</label>
+    <input type="password" id="new-password" name="newpass" required>
+    <label for="confirm-password">Confirme sua senha</label>
+    <input type="password" id="confirm-password" name="confirmpass" required> 
+    <button type="button" id="confirm-pssw" onclick="resetPassword()">CONFIRMAR</button>       
+</form>
+
+<!-- Formulários de Cadastro -->
+<form class="registration" style="display:none;">
+    <h2>Cadastro de Conta</h2>
+    <div>
+        <label for="full-name">Nome Completo:</label>
+        <input type="text" id="full-name" name="full-name" required>
+    </div>
+    <div>
+        <label for="dob">Data de Nascimento:</label>
+        <input type="date" id="dob" name="dob" required>
+    </div>
+    <div>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="create-password">Crie uma Senha:</label>
+        <input type="password" id="create-password" name="create-password" required>
+    </div>
+    <button type="button" id="register-btn" onclick="showPreferencesForm()">Próximo</button>
+</form>
+
+<form class="preferences" style="display:none;">
+    <h2>Preferências Literárias</h2>
+    <div>
+        <label for="first-genre">1º Gênero Literário:</label>
+        <select id="first-genre">
+            <option value="ficcao">Ficção</option>
+<option value="romance">Romance</option>
+<option value="fantasia">Fantasia</option>
+<option value="suspense">Suspense</option>
+<option value="aventura">Aventura</option>
+<option value="drama">Drama</option>
+<option value="mistério">Mistério</option>
+<option value="terror">Terror</option>
+<option value="ficcao-cientifica">Ficção Científica</option>
+<option value="historico">Histórico</option>
+<option value="biografia">Biografia</option>
+<option value="autoajuda">Autoajuda</option>
+<option value="poesia">Poesia</option>
+<option value="literatura-infantojuvenil">Literatura Infantojuvenil</option>
+<option value="realismo-magico">Realismo Mágico</option>
+<option value="literatura-classica">Literatura Clássica</option>
+<option value="literatura-erotica">Literatura Erótica</option>
+<option value="romance-policial">Romance Policial</option>
+<option value="humor">Humor</option>
+<option value="ensaios">Ensaios</option>
+<option value="literatura-fantastica">Literatura Fantástica</option>
+<option value="novela-graphic">Novela Gráfica</option>
+<option value="literatura-oriental">Literatura Oriental</option>
+<option value="manga-manhwa-manhua">Mangá/Manhwa/Manhua</option>
+<option value="hq">HQ (História em Quadrinhos)</option>
+        </select>
+    </div>
+    <div>
+        <label for="second-genre">2º Gênero Literário:</label>
+        <select id="second-genre">
+            <option value="ficcao">Ficção</option>
+<option value="romance">Romance</option>
+<option value="fantasia">Fantasia</option>
+<option value="suspense">Suspense</option>
+<option value="aventura">Aventura</option>
+<option value="drama">Drama</option>
+<option value="mistério">Mistério</option>
+<option value="terror">Terror</option>
+<option value="ficcao-cientifica">Ficção Científica</option>
+<option value="historico">Histórico</option>
+<option value="biografia">Biografia</option>
+<option value="autoajuda">Autoajuda</option>
+<option value="poesia">Poesia</option>
+<option value="literatura-infantojuvenil">Literatura Infantojuvenil</option>
+<option value="realismo-magico">Realismo Mágico</option>
+<option value="literatura-classica">Literatura Clássica</option>
+<option value="literatura-erotica">Literatura Erótica</option>
+<option value="romance-policial">Romance Policial</option>
+<option value="humor">Humor</option>
+<option value="ensaios">Ensaios</option>
+<option value="literatura-fantastica">Literatura Fantástica</option>
+<option value="novela-graphic">Novela Gráfica</option>
+<option value="literatura-oriental">Literatura Oriental</option>
+<option value="manga-manhwa-manhua">Mangá/Manhwa/Manhua</option>
+<option value="hq">HQ (História em Quadrinhos)</option>
+        </select>
+    </div>
+    <div>
+        <label for="third-genre">3º Gênero Literário:</label>
+        <select id="third-genre">
+            <option value="ficcao">Ficção</option>
+<option value="romance">Romance</option>
+<option value="fantasia">Fantasia</option>
+<option value="suspense">Suspense</option>
+<option value="aventura">Aventura</option>
+<option value="drama">Drama</option>
+<option value="mistério">Mistério</option>
+<option value="terror">Terror</option>
+<option value="ficcao-cientifica">Ficção Científica</option>
+<option value="historico">Histórico</option>
+<option value="biografia">Biografia</option>
+<option value="autoajuda">Autoajuda</option>
+<option value="poesia">Poesia</option>
+<option value="literatura-infantojuvenil">Literatura Infantojuvenil</option>
+<option value="realismo-magico">Realismo Mágico</option>
+<option value="literatura-classica">Literatura Clássica</option>
+<option value="literatura-erotica">Literatura Erótica</option>
+<option value="romance-policial">Romance Policial</option>
+<option value="humor">Humor</option>
+<option value="ensaios">Ensaios</option>
+<option value="literatura-fantastica">Literatura Fantástica</option>
+<option value="novela-graphic">Novela Gráfica</option>
+<option value="literatura-oriental">Literatura Oriental</option>
+<option value="manga-manhwa-manhua">Mangá/Manhwa/Manhua</option>
+<option value="hq">HQ (História em Quadrinhos)</option>
+        </select>
+    </div>
+    <button type="button" id="preferences-btn" onclick="showBookFormatForm()">Próximo</button>
+</form>
+
+<form class="book-format" style="display:none;">
+    <h2>Formato de Livro Preferido</h2>
+    <div>
+        <label for="book-format">Escolha o formato:</label>
+        <select id="book-format">
+            <option value="fisico">Empréstimo físico</option>
+            <option value="digital">Exemplar digital</option>
+        </select>
+    </div>
+    <button type="button" id="book-format-btn" onclick="showNewsletterForm()">Próximo</button>
+</form>
+
+<form class="newsletter" style="display:none;">
+    <h2>Inscrição na Newsletter</h2>
+    <div>
+        <label for="newsletter">Deseja se inscrever na newsletter?</label>
+        <select id="news-option">
+            <option value="1">Sim</option>
+            <option value="2">Não</option>
+            </select>
+    </div>
+    <div>
+        <label for="payment">Quanto você deseja pagar por mês para manter a sua inscrição?</label>
+        <select id="payment-amount">
+            <option value="1">12,00</option>
+            <option value="2">22,00</option>
+            <option value="1">34,00</option>
+            <option value="1">52,00</option>
+    </div>
+    </select>
+    <button type="submit" id="submit-btn">Finalizar Cadastro</button>
+</form>
+</div>
+    <footer>
+  <img src="IMG/logo.png" alt="Logo da Aurora">
+  <p>Siga a Aurora nas redes sociais</p>
+  <div class="social-icons">
+ <i class="fab fa-instagram">                                   @Biblioteca_Aurora</i>
+    <i class="fab fa-x">   @Aurora_ofc</i>
+  </div>
+  <div id="copy">
+    <p>&copy; <span id="year"></span> Biblioteca Aurora. Todos os direitos reservados.</p>
+  </div>
+</footer>
+    </body>
+</html>
